@@ -74,6 +74,15 @@ for i in range(0, t):
     print("")
 	
 #day5-loops
+#!/bin/python3
+
+import sys
+
+
+n = int(input().strip())
+
+for i,_ in enumerate(range(10),1):
+    print("{} x {} = {}".format(n,i,n*i))
 
 #day6-review
 import sys
@@ -100,3 +109,26 @@ n = int(input().strip())
 arr = [int(arr_temp) for arr_temp in input().strip().split(' ')]
 for i,_ in enumerate(arr):
     print(arr[-1-i], end=" ")
+
+day8-dictionaries 
+import sys
+#https://stackoverflow.com/questions/14147369/make-a-dictionary-in-python-from-input-values
+n = int(input().strip())
+contacts = dict(input().split() for _ in range(n))
+#print(contacts)
+
+#https://www.quora.com/How-do-I-get-an-unknown-number-of-input-entries-in-Python-one-per-line
+try:
+    while True:
+        name = input()
+        if name != "":
+            if name in contacts:
+                print("{}={}".format(name,contacts[name]))
+            else:
+                print("Not found")
+        else:
+            break
+
+except EOFError:
+	pass
+    
