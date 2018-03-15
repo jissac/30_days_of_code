@@ -80,7 +80,7 @@ import sys
 
 
 n = int(input().strip())
-
+#http://book.pythontips.com/en/latest/enumerate.html?highlight=enumerate
 for i,_ in enumerate(range(10),1):
     print("{} x {} = {}".format(n,i,n*i))
 
